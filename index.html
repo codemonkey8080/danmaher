@@ -1,1 +1,219 @@
-aaa
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Maher - Technical Consultant</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            
+            /* Your top-down desk image */
+            background: url('/images/background.png') center/cover no-repeat;
+            
+            /* Slight dark overlay to keep the focus on the card */
+            box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.4);
+        }
+
+        .business-card {
+            background: linear-gradient(135deg, #353a40 0%, #222529 100%);
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            border-left: 1px solid rgba(255, 255, 255, 0.04);
+            
+            width: 600px;
+            height: 350px;
+            border-radius: 4px;
+            box-shadow: 20px 25px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0,0,0,0.4);
+            display: flex;
+            padding: 45px;
+            box-sizing: border-box;
+            
+            transform: rotate(-10deg);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+            position: relative;
+        }
+
+        .business-card:hover {
+            transform: translateY(-8px) rotate(0deg) scale(1.02);
+            box-shadow: 25px 35px 50px rgba(0, 0, 0, 0.7), 0 0 20px rgba(0,0,0,0.3);
+        }
+
+        .left-col {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-right: 1px solid rgba(255, 255, 255, 0.07);
+            padding-right: 40px;
+        }
+
+        .right-col {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 40px;
+        }
+
+        .logo-svg {
+            width: 75px;
+            height: 75px;
+            margin-bottom: 20px;
+            filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.4));
+        }
+
+        h1 {
+            color: #8aa5b3; 
+            margin: 0 0 8px 0;
+            font-size: 28px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 600;
+        }
+
+        .title {
+            color: #9ba6ad;
+            margin: 0;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            line-height: 1.4;
+        }
+
+        /* Combined Icon and Text Link Styling */
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin: 18px 0;
+            color: #d1a77b; /* Base Copper/Gold */
+            text-decoration: none;
+            transition: color 0.2s, transform 0.2s;
+            cursor: pointer;
+        }
+
+        .contact-item svg {
+            width: 20px;
+            height: 20px;
+            margin-right: 14px;
+            /* Inherits the copper color from the parent link */
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            transition: transform 0.2s;
+        }
+
+        .contact-item span {
+            font-size: 15px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Hover Effects for the entire row */
+        .contact-item:hover {
+            color: #f2c99d; /* Brighter highlight */
+            transform: translateX(4px);
+        }
+
+        .contact-item:hover svg {
+            transform: scale(1.1); /* Icon pops slightly */
+        }
+
+        @media (max-width: 650px) {
+            .business-card {
+                width: 90%;
+                height: auto;
+                flex-direction: column;
+                padding: 35px;
+                transform: rotate(-1deg); 
+            }
+            .business-card:hover {
+                transform: translateY(-5px) rotate(0deg) scale(1.02);
+            }
+            .left-col {
+                border-right: none;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+                padding-right: 0;
+                padding-bottom: 30px;
+                margin-bottom: 30px;
+                text-align: center;
+            }
+            .right-col {
+                padding-left: 0;
+                align-items: center; /* Center the links on mobile */
+            }
+            .logo-svg {
+                margin: 0 auto 20px auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="business-card">
+        <div class="left-col">
+            <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <g transform="translate(50, 50)">
+                    <circle cx="0" cy="0" r="42" fill="none" stroke="#5a7782" stroke-width="1" opacity="0.5"/>
+                    <circle cx="0" cy="0" r="26" fill="none" stroke="#a8b2b8" stroke-width="0.5" opacity="0.4"/>
+                    
+                    <polygon points="-26,-26 -12,-18 -18,-12" fill="#a8b2b8" opacity="0.8"/>
+                    <polygon points="26,-26 12,-18 18,-12" fill="#5a7782"/>
+                    <polygon points="26,26 12,18 18,12" fill="#a8b2b8" opacity="0.8"/>
+                    <polygon points="-26,26 -12,18 -18,12" fill="#5a7782"/>
+
+                    <polygon points="0,-40 0,0 -12,0" fill="#a8b2b8"/>
+                    <polygon points="0,-40 0,0 12,0" fill="#5a7782"/>
+                    
+                    <polygon points="40,0 0,0 0,-12" fill="#a8b2b8"/>
+                    <polygon points="40,0 0,0 0,12" fill="#5a7782"/>
+                    
+                    <polygon points="0,40 0,0 12,0" fill="#a8b2b8"/>
+                    <polygon points="0,40 0,0 -12,0" fill="#5a7782"/>
+                    
+                    <polygon points="-40,0 0,0 0,12" fill="#a8b2b8"/>
+                    <polygon points="-40,0 0,0 0,-12" fill="#5a7782"/>
+                    
+                    <circle cx="0" cy="0" r="3" fill="#222529" />
+                </g>
+            </svg>
+
+            <h1>Daniel Maher</h1>
+            <p class="title">Professional &<br>Technical Consultant</p>
+        </div>
+        <div class="right-col">
+            <a href="https://www.danmaher.com" class="contact-item">
+                <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+                <span>danmaher.com</span>
+            </a>
+            
+            <a href="mailto:dan@danmaher.com" class="contact-item">
+                <svg viewBox="0 0 24 24">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <span>dan@danmaher.com</span>
+            </a>
+            
+            <a href="https://www.linkedin.com/in/daniel-maher-26b3a2229/" target="_blank" class="contact-item">
+                <svg viewBox="0 0 24 24">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+                <span>LinkedIn Profile</span>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
